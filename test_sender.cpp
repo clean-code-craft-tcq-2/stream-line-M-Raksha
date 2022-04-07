@@ -13,7 +13,7 @@ TEST_CASE("Genearte Random data")
     for(seed=0;seed<30;seed++)
     {
         
-      random_Data[i] = generateRandomSimulatedData(MAX_CURRENT,MIN_CURRENT,seed);
+      random_Data[seed] = generateRandomSimulatedData(MAX_CURRENT,MIN_CURRENT,seed);
       REQUIRE(random_Data[seed] != 0);
       
     }
