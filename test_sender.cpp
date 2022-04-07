@@ -6,7 +6,7 @@
 
 // test random generator
     float random_Data[30];
-    int seed
+    int seed;
     for(seed=0;seed<30;seed++)
     {
         
