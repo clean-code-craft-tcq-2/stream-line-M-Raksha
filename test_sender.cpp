@@ -5,15 +5,18 @@
 
 
 // test random generator
+
+TEST_CASE("Genearte Random data")
+{
     float random_Data[30];
     int seed;
     for(seed=0;seed<30;seed++)
     {
         
       random_Data[i] = generateRandomSimulatedData(MAX_CURRENT,MIN_CURRENT,seed);
-      REQUIRE(random_Data[i] != 0);
+      REQUIRE(random_Data[seed] != 0);
       
     }
 
-
+}
      
