@@ -3,13 +3,15 @@ import sys
 class statistics:
     max_soc, min_soc, max_temp, min_temp, mov_avg_soc, mov_avg_temp = 0, 0, 0, 0, 0, 0
 
-
+# get the data streamed  on console by the sensor/sender
 def get_data_from_sender():
-    data = sys.stdin.read()
+    data = sys.stdin.read() # read console data
     return data
 
 def split_data_from_sender(data):
     data_list = data.split('\n')
+    print(type(data_list))
+    print(data_list)
     data_list[0] = data_list[0].replace("SOC,", "")
     data_list[1] = data_list[1].replace("TEMPERATURE,", "")
     soc_list = data_list[0].split(' ')
@@ -37,6 +39,5 @@ def process_data_from_sender(data):
 
 if __name__ == '__main__':
     data = get_data_from_sender()
-    print(type(data))
     print("data recieved from sender\n", data)
     process_data_from_sender(data)
