@@ -54,7 +54,7 @@ jobs:
           coverage html
           coverage report
       - name: run pipeline
-        run:  python receiver.py | ./sender
+        run:  ./sender | python receiver.py 
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
