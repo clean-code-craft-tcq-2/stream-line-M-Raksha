@@ -14,7 +14,8 @@ def split_data_from_sender(data):
     data_list[1] = data_list[1].replace("TEMPERATURE,", "")
     soc_list = data_list[0].split(' ')
     temp_list = data_list[1].split(' ')
-    #converting str in int
+    
+    # converting str in int
     return  list(map(int, soc_list)), list(map(int, temp_list))
 
 def compute_statitics(soc_list, temp_list, index):
@@ -36,4 +37,5 @@ def process_data_from_sender(data):
 
 if __name__ == '__main__': 
     data = get_data_from_sender()
+    print(data)
     #process_data_from_sender(data)
