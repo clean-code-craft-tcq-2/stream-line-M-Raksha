@@ -35,7 +35,8 @@ def process_data_from_sender(data):
         print ("Soc :{}\tTemp:{}\tMax Soc:{}\tMin Soc:{}\tMax Temp:{}\tMin Temp:{}\tMoving Avg Soc:{}\tMoving Avg Temp:{}".format(soc_list[index], temp_list[index],stats.max_soc, stats.min_soc, stats.max_temp, stats.min_temp, stats.mov_avg_soc, stats.mov_avg_temp))
     return stats
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     data = get_data_from_sender()
+    print(type(data))
     print("data recieved from sender\n", data)
     process_data_from_sender(data)
