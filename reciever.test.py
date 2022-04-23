@@ -14,7 +14,6 @@ class reciever_test(unittest.TestCase):
 48.000000,350.000000
 59.000000,350.000000"""
     
-    print(consoleData)
     def test_split_data_from_sender(self):
         soc_list,temp_list = reciever.split_data_from_sender(self.consoleData)
         self.assertEqual(soc_list, [58, 29, 29, 43, 34, 43, 33, 27, 48, 59])
