@@ -53,6 +53,8 @@ jobs:
           coverage run --branch reciever.test.py
           coverage html
           coverage report
+      - name: run pipeline
+        run:  python receiver.py | ./sender
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
