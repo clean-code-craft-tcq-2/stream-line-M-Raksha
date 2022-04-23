@@ -21,8 +21,8 @@ def split_data_from_sender(data):
     batteryTemperature_list = []
     for dataSet in dataSet_list: 
         BatteryParameter_list = dataSet.split(',')
-        batteryCurrent_list.append(BatteryParameter_list[0])
-        batteryTemperature_list.append(BatteryParameter_list[1])
+        batteryCurrent_list.append(float(BatteryParameter_list[0]))
+        batteryTemperature_list.append(float(BatteryParameter_list[1]))
     
     # converting str in int
     batteryCurrent_list, batteryTemperature_list = list(map(int, batteryCurrent_list)), list(map(int, batteryTemperature_list))
