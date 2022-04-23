@@ -41,7 +41,7 @@ def compute_statitics(soc_list, temp_list, index):
 
 def process_data_from_sender(data):
     soc_list,temp_list = split_data_from_sender(data)
-    for index in range(1,10):
+    for index in range(0,10):
         stats = compute_statitics(soc_list, temp_list, index)
         print ("Soc :{}\tTemp:{}\tMax Soc:{}\tMin Soc:{}\tMax Temp:{}\tMin Temp:{}\tMoving Avg Soc:{}\tMoving Avg Temp:{}".format(soc_list[index], temp_list[index],stats.max_soc, stats.min_soc, stats.max_temp, stats.min_temp, stats.mov_avg_soc, stats.mov_avg_temp))
     return stats
