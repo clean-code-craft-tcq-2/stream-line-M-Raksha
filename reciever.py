@@ -17,24 +17,15 @@ def split_data_from_sender(data):
     dataSet_list = dataSet_list[0:50]
     
     # loop each data set of sensor data set list
-    batteryCurrent = []
-    batteryTemperature = []
+    batteryCurrent_list = []
+    batteryTemperature_list = []
     for dataSet in dataSet_list: 
         BatteryParameter_list = dataSet.split(',')
-        batteryCurrent.append(BatteryParameter_list[0])
-        batteryTemperature.append(BatteryParameter_list[1])
-        
-    print("batterCurrent = ",  batteryCurrent)
-    print("batteryTemperature = ", batteryTemperature)
-    
-    
-    data_list[0] = data_list[0].replace("SOC,", "")
-    data_list[1] = data_list[1].replace("TEMPERATURE,", "")
-    soc_list = data_list[0].split(' ')
-    temp_list = data_list[1].split(' ')
+        batteryCurrent_list.append(BatteryParameter_list[0])
+        batteryTemperature_list.append(BatteryParameter_list[1])
     
     # converting str in int
-    return  list(map(int, soc_list)), list(map(int, temp_list))
+    return  print(list(map(int, batteryCurrent_list)), list(map(int, batteryTemperature_list)))
 
 def compute_statitics(soc_list, temp_list, index):
     stats = statistics()
