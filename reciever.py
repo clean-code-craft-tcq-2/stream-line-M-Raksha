@@ -16,7 +16,9 @@ def split_data_from_sender(data):
     # get only 50 sample of sensor data
     data_list = data_list[0:50]
     
-    print(type(data_list[0]), data_list[0]) 
+    BatteryParameter_list = data_list[0].split(',')
+    print("current = ", BatteryParameter_list[0])
+    print("Temperature = ", BatteryParameter_list[1])
     
     data_list[0] = data_list[0].replace("SOC,", "")
     data_list[1] = data_list[1].replace("TEMPERATURE,", "")
