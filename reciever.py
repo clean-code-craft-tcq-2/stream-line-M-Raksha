@@ -16,7 +16,7 @@ def split_data_from_sender(data):
     # get only 50 sample of sensor data set
     dataSet_list = dataSet_list[0:50]
     
-    # loop each data set of sensor data set list
+    # loop each data set of sensor data set list and split the battery parameter data
     batteryCurrent_list = []
     batteryTemperature_list = []
     for dataSet in dataSet_list: 
@@ -26,8 +26,6 @@ def split_data_from_sender(data):
     
     # converting str in int
     batteryCurrent_list, batteryTemperature_list = list(map(int, batteryCurrent_list)), list(map(int, batteryTemperature_list))
-    print("batteryCurrent_list = ", batteryCurrent_list, "batteryTemperature_list = ", batteryTemperature_list)
-    
     return batteryCurrent_list, batteryTemperature_list
 
 
@@ -43,12 +41,11 @@ def compute_statitics(soc_list, temp_list, index):
 
 def process_data_from_sender(data):
     soc_list,temp_list = split_data_from_sender(data)
-    for index in range(1,50):
+    for index in range(1,10):
         stats = compute_statitics(soc_list, temp_list, index)
         print ("Soc :{}\tTemp:{}\tMax Soc:{}\tMin Soc:{}\tMax Temp:{}\tMin Temp:{}\tMoving Avg Soc:{}\tMoving Avg Temp:{}".format(soc_list[index], temp_list[index],stats.max_soc, stats.min_soc, stats.max_temp, stats.min_temp, stats.mov_avg_soc, stats.mov_avg_temp))
     return stats
 
 if __name__ == '__main__':
     data = get_data_from_sender()
-    print("data recieved from sender\n", data)
     process_data_from_sender(data)
