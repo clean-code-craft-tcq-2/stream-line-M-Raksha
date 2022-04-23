@@ -37,5 +37,5 @@ def process_data_from_sender(data):
 
 if __name__ == '__main__': 
     data = get_data_from_sender()
-    print(data)
+    print("data recieved from sender\n", data)
     process_data_from_sender(data)
