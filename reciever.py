@@ -17,10 +17,12 @@ def split_data_from_sender(data):
     dataSet_list = dataSet_list[0:50]
     
     # loop each data set of sensor data set list
+    batteryCurrent = []
+    batteryTemperature = []
     for dataSet in dataSet_list: 
         BatteryParameter_list = dataSet.split(',')
-        batteryCurrent = BatteryParameter_list[0]
-        batteryTemperature = BatteryParameter_list[1]
+        batteryCurrent.append(BatteryParameter_list[0])
+        batteryTemperature.append(BatteryParameter_list[1])
         
     print("batterCurrent = ",  batteryCurrent)
     print("batteryTemperature = ", batteryTemperature)
