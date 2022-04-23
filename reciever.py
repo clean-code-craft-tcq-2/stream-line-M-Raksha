@@ -9,10 +9,15 @@ def get_data_from_sender():
     return data
 
 def split_data_from_sender(data):
+    
+    # create a list of data read from the console
     data_list = data.split('\n')
+    
+    # get only 50 sample of sensor data
     data_list = data_list[0:50]
-    print(type(data_list))
-    print(data_list)
+    
+    print(type(data_list[0]), data_list[0]) 
+    
     data_list[0] = data_list[0].replace("SOC,", "")
     data_list[1] = data_list[1].replace("TEMPERATURE,", "")
     soc_list = data_list[0].split(' ')
