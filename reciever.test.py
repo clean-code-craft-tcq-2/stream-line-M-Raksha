@@ -36,7 +36,7 @@ class reciever_test(unittest.TestCase):
         self.assertEqual(stats.max_temp, 376)
         self.assertEqual(stats.min_temp, 53)
         self.assertEqual(stats.mov_avg_soc, 37)
-        self.assertEqual(stats.mov_avg_temp, 296)'''
+        self.assertEqual(stats.mov_avg_temp, 296)
     
     
 
