@@ -38,4 +38,4 @@ def process_data_from_sender(data):
 if __name__ == '__main__': 
     data = get_data_from_sender()
     print(data)
-    #process_data_from_sender(data)
+    process_data_from_sender(data)
