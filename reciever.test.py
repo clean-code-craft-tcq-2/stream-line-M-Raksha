@@ -29,14 +29,14 @@ class reciever_test(unittest.TestCase):
         self.assertEqual(stats.mov_avg_soc, 23.2)
         self.assertEqual(stats.mov_avg_temp, 183.6)
     
-    '''def test_process_data_from_sender(self):
+    def test_process_data_from_sender(self):
         stats = reciever.process_data_from_sender(self.consoleData)
-        self.assertEqual(stats.max_soc, 59)
+        self.assertEqual(stats.max_soc, 58)
         self.assertEqual(stats.min_soc, 27)
         self.assertEqual(stats.max_temp, 376)
         self.assertEqual(stats.min_temp, 53)
-        #self.assertEqual(stats.mov_avg_soc, 55.2)
-        #self.assertEqual(stats.mov_avg_temp, 8.8)'''
+        self.assertEqual(stats.mov_avg_soc, 37)
+        self.assertEqual(stats.mov_avg_temp, 296)'''
     
     
 
