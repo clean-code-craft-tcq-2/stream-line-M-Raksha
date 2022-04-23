@@ -42,5 +42,6 @@ bool GetdataAndStreamOnCOnsole(unsigned noOfSamplesTobeRead)
        retVal=streamOnConsole(formatttedData);
     }
     
+	cout << retVal;
     return retVal;
 }
