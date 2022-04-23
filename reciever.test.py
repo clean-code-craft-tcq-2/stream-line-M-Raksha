@@ -2,6 +2,10 @@ import unittest
 import reciever
 import os
 
+for x in range(50):
+    print("58.400000,300")
+
+    
 class reciever_test(unittest.TestCase):
     consoleData = """58.400000,300
 29.000000,309.000000
