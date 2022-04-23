@@ -10,6 +10,7 @@ def get_data_from_sender():
 
 def split_data_from_sender(data):
     data_list = data.split('\n')
+    data_list = data_list[0:50]
     print(type(data_list))
     print(data_list)
     data_list[0] = data_list[0].replace("SOC,", "")
