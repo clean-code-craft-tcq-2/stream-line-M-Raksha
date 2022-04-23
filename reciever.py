@@ -10,15 +10,21 @@ def get_data_from_sender():
 
 def split_data_from_sender(data):
     
-    # create a list of data read from the console
-    data_list = data.split('\n')
+    # create a list of sensor data set read from the console
+    dataSet_list = data.split('\n')
     
-    # get only 50 sample of sensor data
-    data_list = data_list[0:50]
+    # get only 50 sample of sensor data set
+    dataSet_list = dataSet_list[0:50]
     
-    BatteryParameter_list = data_list[0].split(',')
-    print("current = ", BatteryParameter_list[0])
-    print("Temperature = ", BatteryParameter_list[1])
+    # loop each data set of sensor data set list
+    for dataSet in dataSet_list: 
+        BatteryParameter_list = dataSet.split(',')
+        batteryCurrent = BatteryParameter_list[0]
+        batteryTemperature = BatteryParameter_list[1]
+        
+    print("batterCurrent = ",  batteryCurrent)
+    print("batteryTemperature = ", batteryTemperature)
+    
     
     data_list[0] = data_list[0].replace("SOC,", "")
     data_list[1] = data_list[1].replace("TEMPERATURE,", "")
