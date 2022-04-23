@@ -25,7 +25,11 @@ def split_data_from_sender(data):
         batteryTemperature_list.append(BatteryParameter_list[1])
     
     # converting str in int
-    return  print(list(map(int, batteryCurrent_list)), list(map(int, batteryTemperature_list)))
+    batteryCurrent_list, batteryTemperature_list = list(map(int, batteryCurrent_list)), list(map(int, batteryTemperature_list))
+    print("batteryCurrent_list = ", batteryCurrent_list, "batteryTemperature_list = ", batteryTemperature_list)
+    
+    return batteryCurrent_list, batteryTemperature_list
+
 
 def compute_statitics(soc_list, temp_list, index):
     stats = statistics()
