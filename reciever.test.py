@@ -2,10 +2,6 @@ import unittest
 import reciever
 import os
 
-for x in range(50):
-    print("58.400000,300")
-
-    
 class reciever_test(unittest.TestCase):
     consoleData = """58.400000,300
 29.000000,309.000000
@@ -48,9 +44,6 @@ class reciever_test(unittest.TestCase):
         self.assertEqual(stats.min_temp, 53)
         self.assertEqual(stats.mov_avg_soc, 37)
         self.assertEqual(stats.mov_avg_temp, 296)
-    
-    
-
 
 if __name__ == '__main__':
   unittest.main()
