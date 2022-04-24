@@ -64,7 +64,7 @@ jobs:
           
       - name: Run and collect coverage
         run: |
-          coverage run --branch ./reciever.test.py | python ./reciever.py
+          coverage run --branch ./reciever.py | python ./reciever.test.py
           coverage html
           coverage report
           
