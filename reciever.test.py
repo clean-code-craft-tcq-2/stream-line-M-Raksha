@@ -19,7 +19,7 @@ class reciever_test(unittest.TestCase):
 59.000000,350.000000"""
     
     def test_get_data_from_sender(self):
-        textRead = get_data_from_sender()
+        textRead = reciever.get_data_from_sender()
         print("Receiver Data Received")
         print(textRead)
         readingsLen = len(list(textRead.split("\n")))
